@@ -5,6 +5,8 @@ const Cities = [
     'London',
     'Madrid'
   ];
+
+// let products:any = [{name: "Mr Prop"}];
   
   export const createStore = () => {
     const store = {
@@ -16,6 +18,15 @@ const Cities = [
           return Cities.filter(city =>
             city.toLowerCase().includes(store.query.get())
           );
+        },
+        // products:[{name: "Mr Prop"}],
+        products: observable.box([], { name: "produxt" }),
+        setProducts(updatedProducts:any){
+            store.products.set(updatedProducts)
+        },
+        
+        get updatedProducts(){
+            return JSON.parse(JSON.stringify(store.products.get()))
         }
     };
   
