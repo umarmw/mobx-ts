@@ -11,7 +11,6 @@ export const CityView: React.FC<{ cities: string[] }> = ({ cities }) => {
 
 export const CityList = () => {
   const cities = useRootData(store => store.filteredCities);
-  console.log("city: ", cities)
   return <CityView cities={cities} />
 }
 

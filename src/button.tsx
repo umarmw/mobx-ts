@@ -12,7 +12,6 @@ const Button: React.FC = () => {
 
     const handle = async() => {
         const products = await getResult();
-        // console.log("products via button", products)
         setProducts(JSON.stringify(products));
     }
 
