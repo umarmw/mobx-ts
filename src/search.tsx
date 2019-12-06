@@ -1,6 +1,4 @@
 import React from 'react';
-import { useObserver } from 'mobx-react-lite';
-import { storeContext } from './context';
 import { useRootData } from './hook';
 
 const Search: React.FC = () => {
